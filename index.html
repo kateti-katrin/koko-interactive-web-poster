@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koko interactive web poster</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <!-- Заголовок плаката -->
+            <div class="header-zag">
+                <img src="./img/vector1.svg" alt="vector1">
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <!-- Первый блок -->
+            <section class="firstmodule">
+                <!-- Первый блок первая (левая) часть -->
+                <div class="firstmodule_one">
+                    <div class="firstmodule_one_text">
+                        <h1>Приветствуем вас в КОКО, космической компании для кур!</h1>
+                        <p>Мы хотим показать, как у нас проходят<br>экспедиции. Давайте вместе запустим<br>курочек на Марс</p>
+                    </div>
+                    <div class="firstmodule_one_forma">
+                        <p>Прежде чем начать, укажите ваше имя</p>
+                        <div class="name-input">
+                            <input type="text" id="name" placeholder="Введите ваше имя">
+                        </div>
+                    </div>
+                </div>
+                <!-- Первый блок вторая (правая) часть -->
+                <div class="firstmodule_two">
+                    <div class="firstmodule_two_text">
+                        <h1>Соберите космический корабль<br>для полета на красную планету</h1>
+                        <p>Переместите части в пунктирные области</p>
+                    </div>
+                    <div class="firstmodule_two_play">
+                        <div class="pic0_play1"></div>
+                        <div class="pic1_play1"></div>
+                        <div class="pic2_play1"></div>
+                        <div class="pic3_play1"></div>
+                        <div class="pic4_play1"></div>
+                        <div class="pic5_play1"></div>
+                        <div class="pic6_play1"></div>
+                        <div class="pic7_play1"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Второй блок -->
+            <section class="secondmodule">
+                <!-- Второй блок первая (левая) часть -->
+                <div class="secondmodule_one">
+                    <div class="secondmodule_one_text">
+                        <h1>Теперь выберите курочку для отправки в космос</h1>
+                        <p>Как только определитесь, запустите космический корабль в космос!</p>
+                    </div>
+                    <div class="secondmodule_pics">
+                        <div class="pic1_play2"><img src="./img/koko1.png" alt="Курочка 1"></div>
+                        <div class="pic2_play2"><img src="./img/koko1.png" alt="Курочка 2"></div>
+                        <div class="pic3_play2"><img src="./img/koko1.png" alt="Курочка 3"></div>
+                    </div>
+                </div>
+                <!-- Второй блок вторая (по середине) часть -->
+                <div class="secondmodule_two">
+                    <!-- ВРАТУШКИ -->
+                    <div class="toggle1">
+                        <div class="rectangle">
+                            <div class="rectangle-circle-row">
+                                <div class="circle-row">
+                                    <div class="vr-circle"></div>
+                                    <div class="vr-circle"></div>
+                                    <div class="vr-circle"></div>
+                                </div>
+                                <div class="circle-row">
+                                    <div class="vr-circle"></div>
+                                    <div class="vr-circle"></div>
+                                    <div class="vr-circle"></div>
+                                </div>
+
+                            </div>
+                        </div>                        
+                    </div>                    
+                    <div class="secondmodule_two_text">
+                        <h2>Вкл | Выкл</h2>
+                        <p class="paragraph-small">К полету готовы!</p>
+                    </div>
+                    <!-- ПЕРЕКЛЮЧАТЕЛИ -->
+                    <div class="toggle2">
+                        <div class="toggle-fire">
+                            <div class="circle">
+                                <img class="svg-icon" src="./img/icons/icon_fire.svg" alt="Огонек">
+                            </div>
+                        </div>
+                        <div class="toggle-rocket">
+                            <div class="circle">
+                                <img class="svg-icon" src="./img/icons/icon_rocket.svg" alt="Ракета">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Второй блок третья (правая) часть -->
+                <div class="secondmodule_three">
+                    <!-- КРУГЛАЯ КНОПКА ЗАПУСК -->
+                    <div class="botton_circle">
+                        <div class="inner_circle"></div>
+                    </div>
+                    <div class="secondmodule_three_text">
+                        <h2>Запуск</h2>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

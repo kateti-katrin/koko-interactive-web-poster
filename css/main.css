@@ -1,0 +1,227 @@
+@import "./reset.css";
+@import "./fonts.css";
+
+body {
+    color: #fff;
+    background-color: #0F3047;
+}
+
+h1 {
+    font-family: 'Gilroy Medium', sans-serif;
+    font-size: 23px;
+    margin-bottom: 14px;
+}
+
+h2 {
+    font-family: 'Gilroy Semi-Bold', sans-serif;
+    font-size: 25px;
+    margin-bottom: 9px;
+}
+
+p {
+    font-family: 'Gilroy Regular', sans-serif;
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+.paragraph-small {
+    font-family: 'Gilroy Regular', sans-serif;
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+.container {
+    max-width: 1440px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header {
+    padding-top: 80px; /* Отступ от верха страницы */
+}
+
+/* main */
+
+.main, .secondmodule_pics {
+    margin-top: 40px;
+}
+
+/* firstmodule */
+
+.firstmodule, .secondmodule {
+    display: flex;
+    height: 400px;
+}
+
+.firstmodule_one, .firstmodule_two, .secondmodule_one, .secondmodule_two, .secondmodule_three {
+    border: 1px solid white;
+    padding: 34px 30px 34px 30px;
+}
+
+.firstmodule_one {
+    width: 460px;
+    background-image: url('../img/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.firstmodule_one_forma p {
+    margin-bottom: 16px;
+}
+
+.firstmodule_two, .secondmodule_one {
+    width: 900px;
+}
+
+.firstmodule_one_text {
+    margin-bottom: 32px;
+}
+
+.name-input input[type="text"] {
+    width: 80%; /* Пример: элемент будет занимать 80% ширины родительского блока */
+    height: 50px;
+    border: none;
+    border-radius: 25px; /* Установим радиус скругления углов */
+    background-color: #ffffff;
+    padding: 0 32px;
+    font-family: 'Gilroy Regular', sans-serif;
+    font-size: 18px;
+    color: #2B3F4C;
+}
+
+
+/* secondmodule */
+
+
+/* -- ВРАТУШКИ Первый блок первая (левая) часть --> */
+
+.rectangle {
+    width: 172px;
+    height: 116px;
+    border-radius: 20px;
+    background-color: #375164;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 16px;
+}
+
+.circle-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.vr-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #E5543C;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+
+
+
+.secondmodule_two, .secondmodule_three {
+    width: 230px;
+}
+
+.secondmodule_two_text {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.secondmodule_pics {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondmodule_pics > div {
+    width: calc(33.33% - 1.5%); /* Процентный отступ вместо пикселей */
+}
+
+.secondmodule_pics img {
+    width: 100%;
+    height: auto;
+}
+
+/* -- ПЕРЕКЛЮЧАТЕЛИ Второй блок вторая (по середине) часть --> */
+
+.toggle2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-fire, .toggle-rocket {
+    width: 172px;
+    height: 50px;
+    margin-bottom: 16px;
+    background-color: #F7CC97;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 7px; /* Центрирование по вертикали */
+    left: 16px; /* Отступ от левого края */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%; /* Превращаем в круг */
+}
+
+.toggle-fire > .circle {
+    background-color: #EE7B3C;
+}
+
+.toggle-rocket > .circle {
+    background-color: #E5543C;
+}
+
+.svg-icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* -- КРУГЛАЯ КНОПКА ЗАПУСК Второй блок третья (правая) часть --> */
+
+.secondmodule_three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botton_circle {
+    width: 114px;
+    height: 114px;
+    border-radius: 50%;
+    background-color: #EF8B4E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 30% solid #fff;
+}
+
+.inner_circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #E5543C;
+}

@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /* КРУГЛАЯ КНОПКА */
-
 document.addEventListener('DOMContentLoaded', function() {
     var bottonCircle = document.querySelector('.botton_circle');
 
@@ -177,4 +176,46 @@ restartButton.addEventListener('click', () => {
     setTimeout(() => {
         location.reload();
     }, 1000); // Время в миллисекундах (здесь 1 секунда)
+});
+
+/* МИНИ ИГРА ПАЗЛ */
+document.addEventListener('DOMContentLoaded', function() {
+    let currentDrag = null;
+    
+    document.addEventListener('mousedown', function(e) {
+        currentDrag = e.target;
+        if (!currentDrag.classList.contains('egg_pic')) {
+            currentDrag = null;
+            return;
+        }
+
+        let rect = currentDrag.getBoundingClientRect();
+        let boundingRect = currentDrag.parentElement.getBoundingClientRect(); // Получаем границы родительского элемента
+
+        currentDrag.offsetX = e.clientX - rect.left - boundingRect.left; // Учитываем смещение родителя по горизонтали
+        currentDrag.offsetY = e.clientY - rect.top - boundingRect.top; // Учитываем смещение родителя по вертикали
+
+        currentDrag.style.position = 'absolute';
+        currentDrag.style.zIndex = '1000';
+
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+    });
+
+    function onMouseMove(e) {
+        if (!currentDrag) return;
+
+        currentDrag.style.left = e.clientX - currentDrag.offsetX + 'px';
+        currentDrag.style.top = e.clientY - currentDrag.offsetY + 'px';
+    }
+
+    function onMouseUp() {
+        if (!currentDrag) return;
+        
+        currentDrag.style.zIndex = '';
+        currentDrag.style.position = 'absolute';
+
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+    }
 });

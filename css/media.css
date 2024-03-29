@@ -1,0 +1,340 @@
+@media (max-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        padding: 0 20px;
+    }
+
+    .firstmodule_one {
+        width: 400px;
+    }
+
+    .firstmodule_two, .secondmodule_one {
+        width: 550px;
+    }
+
+    .name-input input[type="text"] {
+        width: 100%;
+    }
+
+    .confirm-button {
+        padding: 12px 28px;
+    }
+
+    .firstmodule, .secondmodule {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .firstmodule_two {
+        width: 100%;
+    }
+
+    .firstmodule_two_play {
+        height: 300px;
+    }
+
+    .firstmodule_two_text {
+        margin-bottom: 20px;
+    }
+
+    .egg_pic {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 15px;
+    }
+
+    .header {
+        padding-top: 60px;
+    }
+
+    .main .secondmodulepics, .main .fourthmoduleoneplants {
+        margin-top: 20px;
+    }
+
+    .firstmodule_one {
+        width: 100%;
+    }
+
+    .name-input input[type="text"] {
+        width: calc(100% - 64px);
+        margin-bottom: 8px;
+    }
+
+    .confirm-button {
+        padding: 10px 24px;
+        font-size: 16px;
+    }
+
+    .firstmodule_two {
+        width: 100%;
+    }
+
+    .firstmodule_two_play {
+        height: 200px;
+    }
+
+    .egg_pic {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@media (max-width: 1024px) {
+    .rectangle {
+        width: 140px;
+        height: 96px;
+        border-radius: 16px;
+        padding: 12px;
+    }
+
+    .secondmodule_two, .secondmodule_three {
+        width: 200px;
+    }
+
+    .toggle-fire, .toggle-rocket {
+        width: 140px;
+        height: 40px;
+    }
+
+    .toggle-fire > .circle,
+    .toggle-rocket > .circle {
+        top: 5px;
+        left: 12px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .svg-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .botton_circle {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 16px;
+        border: 25% solid #fff;
+    }
+
+    .inner_circle {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rectangle {
+        width: 120px;
+        height: 80px;
+        border-radius: 12px;
+        padding: 8px;
+    }
+
+    .secondmodule_two, .secondmodule_three {
+        width: 150px;
+    }
+
+    .toggle-fire, .toggle-rocket {
+        width: 120px;
+        height: 32px;
+    }
+
+    .toggle-fire > .circle,
+    .toggle-rocket > .circle {
+        top: 4px;
+        left: 10px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .svg-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .botton_circle {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 12px;
+        border: 20% solid #fff;
+    }
+
+    .inner_circle {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .thirdmodule {
+        width: 100%;
+        height: auto;
+        max-width: 768px;
+        padding: 16px;
+    }
+
+    .rocket {
+        width: 240px;
+        height: 100px;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #jupiter {
+        width: 400px;
+        height: 400px;
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+    }
+
+    #mars {
+        width: 240px;
+        height: 240px;
+        left: 180px;
+        top: calc(0%);
+    }
+
+    #uranus {
+        width: 40px;
+        height: 40px;
+        left: 150px;
+        top: 100px;
+    }
+
+    #venus {
+        width: 120px;
+        height: 120px;
+        left: 100px;
+        top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .thirdmodule {
+        width: 100%;
+        height: auto;
+        max-width: 600px;
+        padding: 12px;
+    }
+
+    .rocket {
+        width: 180px;
+        height: 76px;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #jupiter {
+        width: 280px;
+        height: 280px;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+    }
+
+    #mars {
+        width: 160px;
+        height: 160px;
+        left: 120px;
+        top: calc(0%);
+    }
+
+    #uranus {
+        width: 30px;
+        height: 30px;
+        left: 100px;
+        top: 70px;
+    }
+
+    #venus {
+        width: 90px;
+        height: 90px;
+        left: 70px;
+        top: 5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .fourthmodule_one, .fourthmodule_two {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourthmodule_one_plants {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .plant {
+        width: 50px;
+        height: 50px;
+    }
+
+    .plant img.svg-flo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .btn-container {
+        margin-top: 20px;
+    }
+
+    .restart-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .fourthmodule_two_eggs {
+        margin-bottom: 20px;
+    }
+
+    .three_egg img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .fourthmodule_one, .fourthmodule_two {
+        flex-direction: column;
+    }
+
+    .fourthmodule_one, .fourthmodule_two {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourthmodule_one_plants {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .plant {
+        width: 40px;
+        height: 40px;
+    }
+
+    .plant img.svg-flo {
+        width: 25px;
+        height: 25px;
+    }
+
+    .fourthmodule_two_eggs {
+        margin-bottom: 10px;
+    }
+
+    .three_egg img {
+        max-width: 100%;
+        height: auto;
+    }
+}

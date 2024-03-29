@@ -114,8 +114,6 @@ p {
     background-color: #DFB888;
 }
 
-
-
 .firstmodule_two {
     position: relative;
     display: flex;
@@ -133,10 +131,6 @@ p {
     z-index: 10;
     position: relative;
 }
-
-
-
-
 
 .egg_pic {
     position: absolute;

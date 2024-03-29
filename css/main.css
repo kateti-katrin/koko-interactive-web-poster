@@ -44,7 +44,7 @@ p {
 
 /* main */
 
-.main, .secondmodule_pics {
+.main, .secondmodule_pics, .fourthmodule_one_plants {
     margin-top: 40px;
 }
 
@@ -55,7 +55,7 @@ p {
     height: 400px;
 }
 
-.firstmodule_one, .firstmodule_two, .secondmodule_one, .secondmodule_two, .secondmodule_three {
+.firstmodule_one, .firstmodule_two, .secondmodule_one, .secondmodule_two, .secondmodule_three, .thirdmodule, .fourthmodule_one, .fourthmodule_two, .fifthmodule {
     border: 1px solid white;
     padding: 34px 30px 34px 30px;
 }
@@ -89,13 +89,34 @@ p {
     font-family: 'Gilroy Regular', sans-serif;
     font-size: 18px;
     color: #2B3F4C;
+    margin-bottom: 10px;
 }
 
+/* КНОПКА ПОДТВЕРДИТЬ */
+.btn-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.confirm-button {
+    background-color: #F7CC97;
+    color: #2B3F4C;
+    border-radius: 50px;
+    padding: 14px 32px;
+    border: none;
+    font-size: 18px;
+    font-family: 'Gilroy Semi-Bold', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+    background-color: #DFB888;
+}
 
 /* secondmodule */
 
-
-/* -- ВРАТУШКИ Первый блок первая (левая) часть --> */
+/* ВРАТУШКИ Первый блок первая (левая) часть */
 
 .rectangle {
     width: 172px;
@@ -104,14 +125,24 @@ p {
     background-color: #375164;
     border: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.rectangle-circle-row {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 12px 16px;
+    height: 100%;
+    width: 100%;
 }
 
 .circle-row {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .vr-circle {
@@ -120,14 +151,16 @@ p {
     border-radius: 50%;
     background-color: #E5543C;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-
-
-
-
-
+.svg-star {
+    width: 24px;
+    height: 24px;
+}
 
 .secondmodule_two, .secondmodule_three {
     width: 230px;
@@ -154,7 +187,7 @@ p {
     height: auto;
 }
 
-/* -- ПЕРЕКЛЮЧАТЕЛИ Второй блок вторая (по середине) часть --> */
+/* ПЕРЕКЛЮЧАТЕЛИ Второй блок вторая (по середине) часть */
 
 .toggle2 {
     display: flex;
@@ -198,6 +231,15 @@ p {
     transform: translate(-50%, -50%);
 }
 
+/* АНИМАЦИЯ ПЕРЕКЛЮЧАТЕЛИ */
+
+.circle {
+    transition: right 0.3s ease, background-color 0.3s ease; /* Анимация перемещения и цвета фона */
+}
+.toggle-fire, .toggle-rocket {
+    transition: background-color 0.3s ease; /* Анимация цвета фона */
+}
+
 /* -- КРУГЛАЯ КНОПКА ЗАПУСК Второй блок третья (правая) часть --> */
 
 .secondmodule_three {
@@ -224,4 +266,186 @@ p {
     height: 90px;
     border-radius: 50%;
     background-color: #E5543C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botton_circle.clicked {
+    background-color: #B74330;
+}
+
+
+
+
+/* thirdmodule */
+
+.thirdmodule {
+    width: 1360px;
+    height: 418px;
+    position: relative;
+    overflow: hidden;
+}
+
+.rocket {
+    width: 316px;
+    height: 134px;
+    left: 30px; /* Отступ от левого края блока */
+    top: 50%; /* Поместить по центру блока по вертикали */
+    transform: translateY(-50%); /* Сдвигаем изображение, чтобы его центр соответствовал центру блока по вертикали */
+}
+  
+.rocket, .planet {
+    position: absolute;
+}
+  
+#jupiter {
+    width: 516px;
+    height: 516px;
+    left: 585px;
+    top: 290px;
+}
+  
+#mars {
+    width: 305px;
+    height: 305px;
+    left: 996px;
+    top: calc(0% - 70px); /* Минус 70 пикс от верха */
+}
+  
+#uranus {
+    width: 60px;
+    height: 60px;
+    left: 900px;
+    top: 192px;
+}
+  
+#venus {
+    width: 160px;
+    height: 160px;
+    left: 660px;
+    top: 34px;
+}
+
+
+
+
+/* fourthmodule */
+
+.fourthmodule {
+    display: flex;
+}
+
+.fourthmodule_one, .fourthmodule_two {
+    width: 680px;
+    height: 725px;
+}
+
+.fourthmodule_one_text, .fourthmodule_two_text {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.fourthmodule_one_plants {
+    width: 620px;
+    height: 116px;
+    background-color: #375164;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center; /* Выравнивание элементов по центру по горизонтали */
+    align-items: center; /* Выравнивание элементов по центру по вертикали */
+    gap: 23px; /* Интервал между кружками */
+}
+
+.plant {
+    width: 62px;
+    height: 62px;
+    background-color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.fourthmodule_one {
+    width: 680px;
+    background-image: url('../img/fields.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* КНОПКА НАЧАТЬ СНАЧАЛА */
+
+.btn-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.restart-button {
+    background-color: white;
+    color: #2B3F4C;
+    border-radius: 50px;
+    padding: 14px 32px;
+    border: none;
+    font-size: 18px;
+    font-family: 'Gilroy Semi-Bold', sans-serif;
+    cursor: pointer; /* Курсор в виде руки, указывающий на интерактивный элемент */
+    transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+}
+
+.restart-button:hover {
+    background-color: #E5E5E5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* fifthmodule */
+
+.fifthmodule {
+    background-color: #061D2D;
+    min-height: 111px; /* Использую min-height вместо height для гибкости */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fifthmodule_one {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1;
+}
+
+.fifthmodule_one img {
+    max-height: 50px; /* Или другое значение, которое лучше подходит */
+    width: auto; /* Сохраняем пропорции изображения */
+}
+
+.fifthmodule_two {
+    text-align: right;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fifthmodule_two h1, .fifthmodule_two p {
+    margin: 0;
+}
+
+.fifthmodule_two h1 + p {
+    margin-top: 3px;
 }

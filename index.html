@@ -14,7 +14,7 @@
         <div class="container">
             <!-- Заголовок плаката -->
             <div class="header-zag">
-                <img src="./img/vector1.svg" alt="vector1">
+                <img src="./img/go-to-mars.svg" alt="Полетели на Марс?">
             </div>
         </div>
     </header>
@@ -25,21 +25,23 @@
                 <!-- Первый блок первая (левая) часть -->
                 <div class="firstmodule_one">
                     <div class="firstmodule_one_text">
-                        <h1>Приветствуем вас в КОКО, космической компании для кур!</h1>
-                        <p>Мы хотим показать, как у нас проходят<br>экспедиции. Давайте вместе запустим<br>курочек на Марс</p>
+                        <h1>Приветствуем вас в&nbsp;КОКО, космической компании для&nbsp;кур!</h1>
+                        <p>Мы хотим показать, как у&nbsp;нас проходят&nbsp;экспедиции. Давайте вместе запустим курочек на&nbsp;Марс</p>
                     </div>
+                    <!-- ФОРМА -->
                     <div class="firstmodule_one_forma">
                         <p>Прежде чем начать, укажите ваше имя</p>
                         <div class="name-input">
                             <input type="text" id="name" placeholder="Введите ваше имя">
+                            <button id="submit-name" class="confirm-button">Подтвердить</button>
                         </div>
                     </div>
-                </div>
+                </div>                
                 <!-- Первый блок вторая (правая) часть -->
                 <div class="firstmodule_two">
                     <div class="firstmodule_two_text">
-                        <h1>Соберите космический корабль<br>для полета на красную планету</h1>
-                        <p>Переместите части в пунктирные области</p>
+                        <h1>Соберите космический корабль<br>для полета на&nbsp;красную планету</h1>
+                        <p>Переместите части в&nbsp;пунктирные области</p>
                     </div>
                     <div class="firstmodule_two_play">
                         <div class="pic0_play1"></div>
@@ -58,8 +60,8 @@
                 <!-- Второй блок первая (левая) часть -->
                 <div class="secondmodule_one">
                     <div class="secondmodule_one_text">
-                        <h1>Теперь выберите курочку для отправки в космос</h1>
-                        <p>Как только определитесь, запустите космический корабль в космос!</p>
+                        <h1>Теперь выберите курочку для&nbsp;отправки в&nbsp;космос</h1>
+                        <p>Как только определитесь, запустите космический корабль в&nbsp;космос!</p>
                     </div>
                     <div class="secondmodule_pics">
                         <div class="pic1_play2"><img src="./img/koko1.png" alt="Курочка 1"></div>
@@ -74,22 +76,21 @@
                         <div class="rectangle">
                             <div class="rectangle-circle-row">
                                 <div class="circle-row">
-                                    <div class="vr-circle"></div>
-                                    <div class="vr-circle"></div>
-                                    <div class="vr-circle"></div>
+                                    <div class="vr-circle"><img class="svg-star" src="./img/icons/star.svg" alt="Звезда"> </div>
+                                    <div class="vr-circle"><img class="svg-star" src="./img/icons/star.svg" alt="Звезда"></div>
+                                    <div class="vr-circle"><img class="svg-star" src="./img/icons/star.svg" alt="Звезда"></div>
                                 </div>
                                 <div class="circle-row">
-                                    <div class="vr-circle"></div>
-                                    <div class="vr-circle"></div>
-                                    <div class="vr-circle"></div>
+                                    <div class="vr-circle"><img class="svg-star" src="./img/icons/star.svg" alt="Звезда"></div>
+                                    <div class="vr-circle"><img class="svg-star" src="./img/icons/star.svg" alt="Звезда"></div>
+                                    <div class="vr-circle"><img class="svg-star" src="./img/icons/star.svg" alt="Звезда"></div>
                                 </div>
-
                             </div>
                         </div>                        
                     </div>                    
                     <div class="secondmodule_two_text">
                         <h2>Вкл | Выкл</h2>
-                        <p class="paragraph-small">К полету готовы!</p>
+                        <p class="paragraph-small">К&nbsp;полету готовы!</p>
                     </div>
                     <!-- ПЕРЕКЛЮЧАТЕЛИ -->
                     <div class="toggle2">
@@ -109,13 +110,93 @@
                 <div class="secondmodule_three">
                     <!-- КРУГЛАЯ КНОПКА ЗАПУСК -->
                     <div class="botton_circle">
-                        <div class="inner_circle"></div>
+                        <div class="inner_circle">
+                            <img src="./img/icons/strelka.svg" alt="Стрелка" style="width: 30px">
+                        </div>
                     </div>
                     <div class="secondmodule_three_text">
                         <h2>Запуск</h2>
                     </div>
                 </div>
             </section>
+
+            
+            <!-- Третий блок -->
+            <section class="thirdmodule">
+                <div class="thirdmodule_one">
+                    <img class="rocket" src="./img/space/rocket.png" alt="Ракета">
+                    <img src="./img/space/jupiter.png" alt="Юпитер" class="planet" id="jupiter">
+                    <img src="./img/space/mars.png" alt="Марс" class="planet" id="mars">
+                    <img src="./img/space/uranus.png" alt="Уран" class="planet" id="uranus">
+                    <img src="./img/space/venus.png" alt="Венера" class="planet" id="venus">
+                  </div>
+            </section>
+
+
+            <!-- Четвертый блок -->
+            <section class="fourthmodule">
+                <!-- Четвертый блок первая (верхняя) часть -->
+                <div class="fourthmodule_one">
+                    <div class="fourthmodule_one_text">
+                        <h1>Пришло время провести первые эксперименты с&nbsp;почвой! Посадите несколько ростков</h1>
+                        <p>Понаблюдайте, как они вырастут на&nbsp;Марсе</p>
+                    </div>
+                    <div class="fourthmodule_one_plants">
+                        <div class="plant"></div>
+                        <div class="plant"></div>
+                        <div class="plant"></div>
+                        <div class="plant"></div>
+                        <div class="plant"></div>
+                        <div class="plant"></div>
+                        <div class="plant"></div>
+                    </div>
+                    <div class="fourthmodule_one_fields"></div>
+                </div>
+
+
+
+
+                <!-- Четвертый блок вторая (нижняя) часть -->
+                <div class="fourthmodule_two">
+                    <div class="fourthmodule_two_eggs">
+                        <!--<div class="card-container">
+                            <div class="card" id="card1" onclick="selectCard(this);" style="background-image: url('./img/cards/card1.png');"></div>
+                            <div class="card" id="card2" onclick="selectCard(this);" style="background-image: url('./img/cards/card2.png');"></div>
+                            <div class="card" id="card3" onclick="selectCard(this);" style="background-image: url('./img/cards/card3.png');"></div>
+                        </div>
+                        -->
+                    </div>
+                    <div class="fourthmodule_two_text">
+                        <h1><span id="user-name-display">[Имя]</span>, поздравляем! Теперь вы знаете, как&nbsp;проходят миссии КОКО.</h1>
+                        <p>Примите подарок — яйцо от&nbsp;курочки с&nbsp;Марса.</p>
+                    </div>
+                    <!-- КНОПКА НАЧАТЬ СНАЧАЛА -->
+                    <div class="btn-container">
+                        <button type="button" class="restart-button">Начать сначала</button>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+            
+            <!-- Пятый блок -->
+            <section class="fifthmodule">
+                <!-- Пятый блок первая (левая) часть -->
+                <div class="fifthmodule_one">
+                    <img src="img/logo.png" alt="Логотип ВШЭ">
+                </div>
+                <!-- Пятый блок вторая (правая) часть -->
+                <div class="fifthmodule_two">
+                    <h1>Екатерина Титова</h1>
+                    <p>Арт-практика</p>
+                </div>
+            </section>
+
+            
+
         </div>
     </main>
     <script src="js/main.js"></script>

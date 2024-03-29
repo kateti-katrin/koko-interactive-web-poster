@@ -197,6 +197,8 @@ p {
     margin-bottom: 20px;
 }
 
+/* КУРОЧКИ МОИ */
+
 .secondmodule_pics {
     width: 100%;
     display: flex;
@@ -205,11 +207,22 @@ p {
 
 .secondmodule_pics > div {
     width: calc(33.33% - 1.5%); /* Процентный отступ вместо пикселей */
+    position: relative;
 }
 
 .secondmodule_pics img {
     width: 100%;
     height: auto;
+    transition: opacity 0.3s;
+}
+
+.secondmodule_pics img.active {
+    border: 1px solid white; /* Белая обводка */
+    border-radius: 20px; /* Скругление углов */
+}
+
+.secondmodule_pics img:not(.active) {
+    opacity: 0.8; /* 80% непрозрачности */
 }
 
 /* ПЕРЕКЛЮЧАТЕЛИ Второй блок вторая (по середине) часть */

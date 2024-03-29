@@ -219,3 +219,13 @@ document.addEventListener('DOMContentLoaded', function() {
         document.removeEventListener('mouseup', onMouseUp);
     }
 });
+
+/* КУРОЧКИ МОИ */
+const images = document.querySelectorAll('.secondmodule_pics img');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        images.forEach(otherImg => otherImg.classList.remove('active'));
+        img.classList.add('active');
+    });
+});

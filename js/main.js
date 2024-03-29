@@ -94,117 +94,87 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+/* ПОЛЕТ РАКЕТЫ */
+document.addEventListener('DOMContentLoaded', () => {
+    const planets = document.querySelectorAll('.planet');
+    const rocket = document.querySelector('.rocket');
 
+    let counter = 0;
 
+    planets.forEach(planet => {
+        planet.addEventListener('click', () => {
+            if (!planet.classList.contains('hidden')) {
+                planet.classList.add('hidden');
+                counter++;
 
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    let selectedPlanet = null;
-    let shiftX;
-    let shiftY;
-
-    document.querySelectorAll('.planet').forEach(planet => {
-        planet.addEventListener('mousedown', onDragStart);
-        planet.addEventListener('touchstart', onDragStart);
-    });
-
-    function onDragStart(event) {
-        selectedPlanet = event.target;
-        // Поддержка сенсорных устройств
-        let eventCoords = event.touches ? event.touches[0] : event;
-        shiftX = eventCoords.clientX - selectedPlanet.getBoundingClientRect().left;
-        shiftY = eventCoords.clientY - selectedPlanet.getBoundingClientRect().top;
-
-        document.addEventListener('mousemove', onDragMove);
-        document.addEventListener('mouseup', onDragEnd);
-        document.addEventListener('touchmove', onDragMove);
-        document.addEventListener('touchend', onDragEnd);
-    }
-
-    function onDragMove(event) {
-        if (!selectedPlanet) return;
-
-        let eventCoords = event.touches ? event.touches[0] : event;
-        let newLeft = eventCoords.clientX - shiftX - document.querySelector('.thirdmodule').getBoundingClientRect().left;
-        let newTop = eventCoords.clientY - shiftY - document.querySelector('.thirdmodule').getBoundingClientRect().top;
-
-        // Ограничение перемещения внутри .thirdmodule
-        let boundaries = document.querySelector('.thirdmodule').getBoundingClientRect();
-        newLeft = Math.min(newLeft, boundaries.width - selectedPlanet.offsetWidth);
-        newLeft = Math.max(newLeft, 0);
-        newTop = Math.min(newTop, boundaries.height - selectedPlanet.offsetHeight);
-        newTop = Math.max(newTop, 0);
-
-        selectedPlanet.style.left = ${newLeft}px;
-        selectedPlanet.style.top = ${newTop}px;
-    }
-
-    function onDragEnd() {
-        document.removeEventListener('mousemove', onDragMove);
-        document.removeEventListener('mouseup', onDragEnd);
-        document.removeEventListener('touchmove', onDragMove);
-        document.removeEventListener('touchend', onDragEnd);
-
-        checkPath() && animateRocket();
-        selectedPlanet = null; // Сбросить выделенную планету
-    }
-
-    function checkPath() {
-        const rocket = document.querySelector('.rocket');
-        const rocketRect = rocket.getBoundingClientRect();
-        let isPathClear = true;
-
-        document.querySelectorAll('.planet').forEach(planet => {
-            let planetRect = planet.getBoundingClientRect();
-
-            // Проверяем, находится ли планета в "коридоре" ракеты
-            if (planetRect.top < rocketRect.top + rocketRect.height && planetRect.bottom > rocketRect.top) {
-                isPathClear = false;
+                if (counter === planets.length) {
+                    rocket.style.transition = 'left 2s';
+                    rocket.style.left = '1200px';
+                }
             }
         });
-
-        return isPathClear;
-    }
-
-    function animateRocket() {
-        const rocket = document.querySelector('.rocket');
-        // Устанавливаем начальное положение ракеты, если был произведен возврат
-        rocket.style.left = '30px'; // Соответствует начальному CSS значению
-        rocket.style.transition = 'left 2s ease-in-out';
-        // Анимируем полет ракеты, перемещая ее вправо на ширину блока .thirdmodule
-        rocket.style.left = ${document.querySelector(&#039;.thirdmodule&#039;).offsetWidth}px;
-
-        // После анимации полета ракеты, возможно, захотим вернуть ее на исходную позицию.
-        // Это можно сделать, удалив анимацию и сбросив свойство left.
-        rocket.addEventListener('transitionend', () => {
-            // Даем некоторое время, чтобы пользователь успел увидеть исчезновение ракеты
-            setTimeout(() => {
-                rocket.style.transition = '';
-                rocket.style.left = 30px;
-            }, 1000);
-        }, { once: true }); // Обработчик события удаляется после первого вызова
-    }
-
-    // Вставьте в приложение вместе с оставшейся частью представленного выше кода
+    });
 });
 
+/* ЦВЕТЫ */
+document.addEventListener('DOMContentLoaded', () => {
+    let activePlant = null; // Элемент, который перемещается
+    let offsetX = 0; // Смещение от начальной точки по оси X
+    let offsetY = 0; // Смещение от начальной точки по оси Y
+  
+    document.querySelectorAll('.plant img.svg-flo').forEach(plant => {
+      plant.addEventListener('mousedown', (event) => {
+        activePlant = event.target;
+        offsetX = event.offsetX;
+        offsetY = event.offsetY;
+  
+        // Уставливаем нужные стили для перемещения
+        activePlant.style.position = 'absolute';
+        activePlant.style.zIndex = 1000;
+        document.body.append(activePlant);
+  
+        moveAt(event.pageX, event.pageY);
+      });
+  
+      // Функция перемещения
+      function moveAt(pageX, pageY) {
+        activePlant.style.left = pageX - offsetX + 'px';
+        activePlant.style.top = pageY - offsetY + 'px';
+      }
+  
+      // Перемещение по экрану
+      document.addEventListener('mousemove', (event) => {
+        if (!activePlant) return;
+  
+        moveAt(event.pageX, event.pageY);
+      });
+  
+      plant.addEventListener('mouseup', () => {
+        activePlant = null;
+      });
+    });
+  
+    // Для защиты от непредвиденного поведения - сброс при выходе мыши из окна
+    document.addEventListener('mouseup', () => {
+        if (activePlant) {
+          activePlant = null;
+        }
+    });
+});
 
-function onTouchStart(event) {
-    if (event.target.classList.contains('planet')) {
-        selectedPlanet = event.target;
-        let touch = event.touches[0];
-        shiftX = touch.clientX - selectedPlanet.getBoundingClientRect().left;
-        shiftY = touch.clientY - selectedPlanet.getBoundingClientRect().top;
+/* КНОПКА НАЧАТЬ СНАЧАЛА */
+const restartButton = document.querySelector('.restart-button');
 
-        document.addEventListener('touchmove', onDragMove);
-        document.addEventListener('touchend', onDragEnd);
-    }
-}
+restartButton.addEventListener('click', () => {
 
-document.querySelectorAll('.planet').forEach(planet => {
-    planet.addEventListener('touchstart', onTouchStart);
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+    
+    // Подождать немного и обновить страницу
+    setTimeout(() => {
+        location.reload();
+    }, 1000); // Время в миллисекундах (здесь 1 секунда)
 });

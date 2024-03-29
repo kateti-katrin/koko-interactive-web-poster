@@ -275,9 +275,6 @@ p {
     background-color: #B74330;
 }
 
-
-
-
 /* thirdmodule */
 
 .thirdmodule {
@@ -290,36 +287,37 @@ p {
 .rocket {
     width: 316px;
     height: 134px;
-    left: 30px; /* Отступ от левого края блока */
-    top: 50%; /* Поместить по центру блока по вертикали */
-    transform: translateY(-50%); /* Сдвигаем изображение, чтобы его центр соответствовал центру блока по вертикали */
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
 }
-  
-.rocket, .planet {
+
+.rocket,
+.planet {
     position: absolute;
 }
-  
+
 #jupiter {
     width: 516px;
     height: 516px;
     left: 585px;
     top: 290px;
 }
-  
+
 #mars {
     width: 305px;
     height: 305px;
     left: 996px;
-    top: calc(0% - 70px); /* Минус 70 пикс от верха */
+    top: calc(0% - 70px);
 }
-  
+
 #uranus {
     width: 60px;
     height: 60px;
     left: 900px;
     top: 192px;
 }
-  
+
 #venus {
     width: 160px;
     height: 160px;
@@ -327,8 +325,9 @@ p {
     top: 34px;
 }
 
-
-
+.hidden {
+    display: none;
+}
 
 /* fourthmodule */
 
@@ -367,13 +366,22 @@ p {
     border-radius: 50%;
 }
 
+.plant img.svg-flo {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .fourthmodule_one {
     width: 680px;
     background-image: url('../img/fields.png');
     background-size: cover;
     background-position: center;
 }
-
 
 /* КНОПКА НАЧАТЬ СНАЧАЛА */
 
@@ -397,20 +405,6 @@ p {
 .restart-button:hover {
     background-color: #E5E5E5;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* fifthmodule */
 

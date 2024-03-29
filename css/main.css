@@ -114,6 +114,81 @@ p {
     background-color: #DFB888;
 }
 
+
+
+.firstmodule_two {
+    position: relative;
+    display: flex;
+}
+
+.firstmodule_two_play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.firstmodule_two_text {
+    z-index: 10;
+    position: relative;
+}
+
+
+
+
+
+.egg_pic {
+    position: absolute;
+}
+
+.pic0_play1 { 
+    left: 500px;
+    top: 0;
+}
+
+.pic1_play1 { 
+    left: 207px;
+    top: 154px;
+}
+
+.pic2_play1 { 
+    left: 323px;
+    top: 159px;
+}
+
+.pic3_play1 { 
+    left: 24px;
+    top: 142px;
+}
+
+.pic4_play1 { 
+    left: 306px;
+    top: 291px;
+}
+
+.pic5_play1 { 
+    left: 542px;
+    top: 60px;
+}
+
+.pic6_play1 { 
+    left: 745px;
+    top: 0;
+}
+
+.pic7_play1 { 
+    left: 55px;
+    top: 256px;
+}
+
+
+
+
+
+
+
+
 /* secondmodule */
 
 /* ВРАТУШКИ Первый блок первая (левая) часть */
@@ -404,6 +479,18 @@ p {
 
 .restart-button:hover {
     background-color: #E5E5E5;
+}
+
+.fourthmodule_two_eggs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.three_egg img {
+    width: 100%;
+    height: auto;
 }
 
 /* fifthmodule */

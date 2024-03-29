@@ -320,6 +320,9 @@ p {
     height: 418px;
     position: relative;
     overflow: hidden;
+    background-image: url('../img/starsky.svg');
+    background-size: cover;
+    background-position: center;
 }
 
 .rocket {
